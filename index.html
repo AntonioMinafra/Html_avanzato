@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Avanzato</title>
+    <link rel="shortcut icon" href="favicon.terzo copia.ico" type="image/x-ico">
+</head>
+<body>
+<!--form è l elemento che serve per contenere tutti gli attributi
+    "action" per inserire i dati "method" decidi se farli vedere "get" oppure no "post".
+    -la textarea è una area dove puoi scrivere qualsiasi cosa direttamente nel sito
+    -input,label e tutti i vari tipi di tasti(email submit reset ecc..)-->
+    
+    <form action="inserimento_dati.php" method="get">
+        <fieldset><!--questo è un contenitore e ci metti la legenda del fieldset-->
+            <legend>Dati Anagrafici</legend>
+            <label for="Nome">Nome</label>
+            <input form="text" name="nome" required>
+            <label for="Cognome">Cognome</label>                
+            <input form="text" name="Cognome">
+            <label for="Codice Fiscale"> Codice Fiscale</label>
+            <input form="text" name="Codice Fiscale" maxlength="16" placeholder="inserire codice Fiscale" required>
+            <label for="Data di Nascita">Data di Nascita</label>
+            <input type="date">
+            <label for="ProvinciadiNascita">Provincia di Nascita</label>
+                <section name="ProvinciadiNascita">
+                    <option value="">Seleziona</option>
+                    <option value="mi">Milano</option>
+                    <option value="ba">Bari</option>
+                    <option value="pa">Palermo</option>
+                </section>
+                <label for="email">email</label>
+                <input type="email">
+        </fieldset>
+    
+        <fieldset>
+            <legend>dati secondari</legend>
+            <span>Interessi</span>
+            <div>
+                <input type="checkbox" id="basket" name="basket" value="basket" checked>
+                <label for="basket">basket</label>
+            </div>
+            <div>
+                <input type="checkbox" id="calcio" name="calcio" value="calcio">
+                <label for="calcio">calcio</label>
+            </div>
+            <div>
+                <input type="checkbox" id="tennis" name="tennis" value="tennis">
+                <label for="tennis">tennis</label>
+            </div>
+            <label for="colorepreferito">Colore Preferito</label>
+            <input type="color" name="colorepreferito">
+            <label for="fileaggiuntivi">File Aggiuntivi</label>
+            <input type="file" multiple>
+            <span style="margin-top:10px;">genere</span>
+            <div>
+                <input type="radio" name="genere" value="m">Femmina 
+                <input type="radio" name="genere" value="m">Maschio
+                <!--se metti la stessa value il bottene potrà essere
+                cliccato solo uno dei due(se li differenzi puoi cliccare entrambi)-->
+            </div>
+         </fieldset>
+         <input type="submit" value="Invia">
+         <input type="reset" value="Resetta">
+    </form>
+    
+    </body>
+</html>
